@@ -129,7 +129,7 @@ function addIconLayers(){
   
   providers.push({
       title: 'JawgMaps',
-      //icon: 'img/icons-streets.png',
+      icon: 'img/icons-streets.png',
       layer: L.tileLayer('https://tile.jawg.io/{z}/{x}/{y}.png?api-key=community', {
           attribution: "&copy; OpenStreetMap JawgMaps",
           maxZoom: 18
@@ -138,7 +138,7 @@ function addIconLayers(){
   
   providers.push({
       title: 'OpenStreetMap',
-      //icon: 'img/icons-carto.png',
+      icon: 'img/icons-carto.png',
       layer: L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
           maxZoom: 18,
           attribution: 'Map tiles by [[http://cartodb.com/attributions#basemaps|CartoDB]], under [[https://creativecommons.org/licenses/by/3.0/|CC BY 3.0]]. Data by [[http://www.openstreetmap.org/|OpenStreetMap]], under ODbL.'
@@ -146,7 +146,7 @@ function addIconLayers(){
   });  
   providers.push({
       title: 'OpenStreetMap',
-      //icon: 'img/icons-mapnik.png',
+      icon: 'img/icons-mapnik.png',
       layer: L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           maxZoom: 18,
           attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -155,7 +155,7 @@ function addIconLayers(){
 
   providers.push({
       title: 'OSM b/n',
-      //icon: 'img/icons-osm-bw.png',
+      icon: 'img/icons-osm-bw.png',
       layer: L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
           maxZoom: 18,
           attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
