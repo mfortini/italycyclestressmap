@@ -1,17 +1,17 @@
 var boundary = [
-    [46.17792864897331, 11.562767028808594],
-    [45.959264977507075, 10.683860778808594]
+    [44.84467, 11.13258],
+    [44.69941, 11.50200]
 ];
 
-const map = L.map('mapid').setView([46.0686, 11.1234], 15)
+const map = L.map('mapid').setView([44.77923,11.30596], 15)
 map.setMaxBounds(boundary);
 var hash = new L.Hash(map);
 const settings = [{ color: '#0099cc', weight: 3, key: 'LTS1', zIndex: 1, title: 'LTS 1 - Adatto ai bambini', url: 'data/level_1.json' },
                 { color: '#1C7C54', weight: 3, key: 'LTS2', zIndex: 2, title: 'LTS 2 - Basso Stress', url: 'data/level_2.json' },
                 { color: '#F0C808', weight: 3, key: 'LTS3', zIndex: 3, title: 'LTS 3 - Stress Moderato', url: 'data/level_3.json' },
                 { color: '#DD5454', weight: 3, key: 'LTS4', zIndex: 4, title: 'LTS 4 - Stress Alto', url: 'data/level_4.json' }]
-const homePage = 'https://github.com/napo/trentocyclestressmap/'
-const legendTitle = 'Livello di stress da traffico in bicicletta - Trento'
+const homePage = 'https://github.com/mfortini/centocyclestressmap/'
+const legendTitle = 'Livello di stress da traffico in bicicletta - Cento'
 const layers = {}
 const tree = rbush.rbush();
 
