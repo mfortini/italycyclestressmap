@@ -3,7 +3,7 @@ var boundary = [
     [44.69941, 11.50200]
 ];
 
-const map = L.map('mapid').setView([44.77923,11.30596], 15)
+const map = L.map('mapid').setView([44.77923,11.30596], 12)
 map.setMaxBounds(boundary);
 var hash = new L.Hash(map);
 const settings = [{ color: '#0099cc', weight: 3, key: 'LTS1', zIndex: 1, title: 'LTS 1 - Adatto ai bambini', url: 'data/level_1.json' },
@@ -129,7 +129,7 @@ function addIconLayers(){
   
   providers.push({
       title: 'JawgMaps',
-      icon: 'img/icons-streets.png',
+      //icon: 'img/icons-streets.png',
       layer: L.tileLayer('https://tile.jawg.io/{z}/{x}/{y}.png?api-key=community', {
           attribution: "&copy; OpenStreetMap JawgMaps",
           maxZoom: 18
@@ -138,7 +138,7 @@ function addIconLayers(){
   
   providers.push({
       title: 'OpenStreetMap',
-      icon: 'img/icons-carto.png',
+      //icon: 'img/icons-carto.png',
       layer: L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
           maxZoom: 18,
           attribution: 'Map tiles by [[http://cartodb.com/attributions#basemaps|CartoDB]], under [[https://creativecommons.org/licenses/by/3.0/|CC BY 3.0]]. Data by [[http://www.openstreetmap.org/|OpenStreetMap]], under ODbL.'
@@ -146,7 +146,7 @@ function addIconLayers(){
   });  
   providers.push({
       title: 'OpenStreetMap',
-      icon: 'img/icons-mapnik.png',
+      //icon: 'img/icons-mapnik.png',
       layer: L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           maxZoom: 18,
           attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -155,7 +155,7 @@ function addIconLayers(){
 
   providers.push({
       title: 'OSM b/n',
-      icon: 'img/icons-osm-bw.png',
+      //icon: 'img/icons-osm-bw.png',
       layer: L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
           maxZoom: 18,
           attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -163,17 +163,7 @@ function addIconLayers(){
   });
 
 
-  providers.push({
-      title: 'Fotoaerea Trento',
-      icon: 'img/icons-satellite.png',
-      layer: L.tileLayer('https://tiles.openaerialmap.org/60770b0fb85cd80007a01414/0/60770b0fb85cd80007a01415/{z}/{x}/{y}', {
-          attribution: "&copy; Comune di Trento",
-          maxZoom: 18
-      })
-  });
-
   L.control.iconLayers(providers).addTo(map);
-
 }
 
 
